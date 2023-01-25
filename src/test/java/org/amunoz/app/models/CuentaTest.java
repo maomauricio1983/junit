@@ -1,5 +1,6 @@
 package org.amunoz.app.models;
 
+import org.amunoz.app.exceptions.DineroInsuficienteException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -56,5 +57,15 @@ class CuentaTest {
         assertEquals("1100.12345", cuenta.getSaldo().toPlainString()); // compara el valor esperado con el real
     }
 
-
+    @Test
+    void testDineroInsufivienteExceptionCuenta() {
+        Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345")); // pasamos los parametros al objeto cuenta
+        // bloque que puede arrojar una excepcion
+        Exception exception = assertThrows(DineroInsuficienteException.class, () -> {
+           cuenta.debito(new BigDecimal(1500));
+        });
+        String real = exception.getMessage(); // obtenemos el mensaje de la excepcion
+        String esperado = "Dinero Insuficiente";
+        assertEquals(esperado, real);// comparamos los mensajes de la excepcion, deben ser iguales.
+    }
 }

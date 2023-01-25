@@ -1,5 +1,7 @@
 package org.amunoz.app.models;
 
+import org.amunoz.app.exceptions.DineroInsuficienteException;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -15,7 +17,11 @@ public class Cuenta {
 
     // metodo que le resta a saldo
     public void debito(BigDecimal monto) {
-        this.saldo = this.saldo.subtract(monto);
+        BigDecimal nuevoSaldo = this.saldo = this.saldo.subtract(monto);
+        if (nuevoSaldo.compareTo(BigDecimal.ZERO) < 0){
+            throw new DineroInsuficienteException("Dinero Insuficiente");
+        }
+        this.saldo = nuevoSaldo;
     }
 
     // metodo que le suma a saldo
