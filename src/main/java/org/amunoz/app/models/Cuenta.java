@@ -1,6 +1,7 @@
 package org.amunoz.app.models;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Cuenta {
 
@@ -27,4 +28,13 @@ public class Cuenta {
     public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == null || o instanceof Cuenta) return true;
+        Cuenta c = (Cuenta) o;
+        return Objects.equals(persona, c.persona) && Objects.equals(saldo, c.saldo);
+    }
+
+
 }
