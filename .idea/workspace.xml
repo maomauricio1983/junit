@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8542b489-9350-4e83-b979-37992cd9756a" name="Changes" comment="implementamos las pruebas de testNombreCuenta y testSaldoCuenta en la clase test">
+    <list default="true" id="8542b489-9350-4e83-b979-37992cd9756a" name="Changes" comment="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java" afterDir="false" />
@@ -65,7 +65,7 @@
       <recent name="org.amunoz.app.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CuentaTest.testReferenciaCuenta">
+  <component name="RunManager" selected="JUnit.CuentaTest">
     <configuration name="CuentaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_app" />
       <extension name="coverage">
@@ -77,6 +77,22 @@
       <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
       <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CuentaTest.testDebitoCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.amunoz.app.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
+      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
+      <option name="METHOD_NAME" value="testDebitoCuenta" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,8 +147,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CuentaTest.testReferenciaCuenta" />
         <item itemvalue="JUnit.CuentaTest" />
+        <item itemvalue="JUnit.CuentaTest.testDebitoCuenta" />
+        <item itemvalue="JUnit.CuentaTest.testReferenciaCuenta" />
         <item itemvalue="JUnit.CuentaTest.testSaldoCuenta" />
         <item itemvalue="JUnit.CuentaTest.testNombreCuenta" />
       </list>
@@ -149,7 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674676670760</updated>
-      <workItem from="1674676671893" duration="4069000" />
+      <workItem from="1674676671893" duration="5800000" />
     </task>
     <task id="LOCAL-00001" summary="creacion del proyecto">
       <created>1674676837401</created>
@@ -172,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674679306157</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia">
+      <created>1674681568554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674681568554</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +217,18 @@
     <MESSAGE value="creacion del proyecto" />
     <MESSAGE value="importamos Junit en el pom, reamos la clase Cuenta  y la clase CuentaTest&#10;  en la carpeta test  para realizar las primeras pruebas." />
     <MESSAGE value="implementamos las pruebas de testNombreCuenta y testSaldoCuenta en la clase test" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementamos las pruebas de testNombreCuenta y testSaldoCuenta en la clase test" />
+    <MESSAGE value="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
