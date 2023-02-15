@@ -10,6 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CuentaTest {
 
+    // shift + F10  ejecuta toda la clase
+
 
     @Test
     void testNombreCuenta() {
@@ -94,20 +96,43 @@ class CuentaTest {
         banco.setNombre("Banco del Estado");
         banco.transferir(cuenta2, cuenta1, new BigDecimal(500));
 
-        assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
-        assertEquals("3000", cuenta1.getSaldo().toPlainString());
+        assertAll(() ->
+                {
+                    assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
+                },
+                () -> {
+                    assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
+                },
+                () -> {
+                    assertEquals("3000", cuenta1.getSaldo().toPlainString());
+                },
+                () -> {
+                    assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
+                },
+                () -> {
+                    assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
+                },
+                () -> {
+                    assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
+                },
+                () -> {
+                    assertEquals("Banco del Estado", cuenta1.getBanco().getNombre()); // compara que el nombre del banco sea el esperado
+                },
+                () -> {
+                    assertEquals("Andres", banco.getCuentas().stream()// obtenemos la lista cuentas
+                            .filter(c -> c.getPersona().equals("Andres")) // con filter revisamos que cuenta dentro de la lista tiene como persona a Andres
+                            .findFirst() //obtenemos el primero que encuentre
+                            .get() // obtenemos la cuenta
+                            .getPersona()); // obtenemos la persona asignada a la cuenta
+                },
+                () -> {
+                    // hace lo mismo que el de arriba
+                    assertTrue(banco.getCuentas().stream()
+                            .anyMatch(c -> c.getPersona().equals("Andres")));
+                }
+        );
 
-        assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
-        assertEquals("Banco del Estado", cuenta1.getBanco().getNombre()); // compara que el nombre del banco sea el esperado
 
-        assertEquals("Andres", banco.getCuentas().stream()// obtenemos la lista cuentas
-                .filter(c -> c.getPersona().equals("Andres")) // con filter revisamos que cuenta dentro de la lista tiene como persona a Andres
-                .findFirst() //obtenemos el primero que encuentre
-                .get() // obtenemos la cuenta
-                .getPersona()); // obtenemos la persona asignada a la cuenta
-
-        // hace lo mismo que el de arriba
-        assertTrue(banco.getCuentas().stream()
-                .anyMatch(c -> c.getPersona().equals("Andres")));
     }
+
 }

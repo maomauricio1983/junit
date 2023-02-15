@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8542b489-9350-4e83-b979-37992cd9756a" name="Changes" comment="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Banco.java" afterDir="false" />
+    <list default="true" id="8542b489-9350-4e83-b979-37992cd9756a" name="Changes" comment="implementamos el metodo testRelacionBancoCuentas() que arroja error en caso de que los assertEquals no pasen su validacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,19 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Vector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.Vector" />
-      <module name="junit_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.amunoz.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CuentaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_app" />
       <extension name="coverage">
@@ -147,13 +131,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CuentaTest.testRelacionBancoCuentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.amunoz.app.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
+      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
+      <option name="METHOD_NAME" value="testRelacionBancoCuentas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CuentaTest" />
+        <item itemvalue="JUnit.CuentaTest.testRelacionBancoCuentas" />
         <item itemvalue="Application.Referencia" />
         <item itemvalue="Application.EjercicioPractico3" />
         <item itemvalue="Application.EjercicioPractico4" />
-        <item itemvalue="Application.Vector" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +177,7 @@
       <workItem from="1674783586400" duration="13000" />
       <workItem from="1674846307664" duration="2460000" />
       <workItem from="1675020436210" duration="20000" />
-      <workItem from="1676424182343" duration="337000" />
+      <workItem from="1676424182343" duration="1346000" />
     </task>
     <task id="LOCAL-00001" summary="creacion del proyecto">
       <created>1674676837401</created>
@@ -214,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674684880823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implementamos el metodo testRelacionBancoCuentas() que arroja error en caso de que los assertEquals no pasen su validacion">
+      <created>1676424621352</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676424621352</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,22 +255,7 @@
     <MESSAGE value="implementamos las pruebas de testNombreCuenta y testSaldoCuenta en la clase test" />
     <MESSAGE value="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia" />
     <MESSAGE value="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero." />
-    <option name="LAST_COMMIT_MESSAGE" value="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/amunoz/app/Vector.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/amunoz/app/EjercicioPractico3.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="implementamos el metodo testRelacionBancoCuentas() que arroja error en caso de que los assertEquals no pasen su validacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementamos el metodo testRelacionBancoCuentas() que arroja error en caso de que los assertEquals no pasen su validacion" />
   </component>
 </project>
