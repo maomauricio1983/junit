@@ -2,6 +2,8 @@ package org.amunoz.app.models;
 
 import org.amunoz.app.exceptions.DineroInsuficienteException;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -14,6 +16,7 @@ class CuentaTest {
 
 
     @Test
+    @DisplayName("probando nombre de la cuenta!")
     void testNombreCuenta() {
         Cuenta cuenta = new Cuenta("Mauricio", new BigDecimal("1000.12345"));
 //        cuenta.setPersona("Mauricio");
@@ -25,6 +28,7 @@ class CuentaTest {
     }
 
     @Test
+    @DisplayName("probando saldo de la cuenta!")
     void testSaldoCuenta() {
         Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345"));
         assertNotNull(cuenta.getSaldo()); //verifica que el saldo NO sea null
@@ -33,6 +37,7 @@ class CuentaTest {
     }
 
     @Test
+    @DisplayName("probando referencia o instancias de la cuenta, que sean iguales con el metodo Equals!")
     void testReferenciaCuenta() {
         Cuenta cuenta = new Cuenta("John Doe", new BigDecimal("8900.9997"));
         Cuenta cuenta2 = new Cuenta("John Doe", new BigDecimal("8900.9997"));
@@ -43,6 +48,7 @@ class CuentaTest {
     }
 
     @Test
+    @DisplayName("probando metodo debito de la cuenta!")
     void testDebitoCuenta() {
         Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345")); // asignamos los valores al objeto cuenta
         cuenta.debito(new BigDecimal(100)); // implementamos el método débito y le pasamos como parámetro un 100
@@ -52,6 +58,7 @@ class CuentaTest {
     }
 
     @Test
+    @DisplayName("probando metodo credito de la cuenta!")
     void testCreditoCuenta() {
         Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345")); // asignamos los valores al objeto cuenta
         cuenta.credito(new BigDecimal(100)); // implementamos el método crédito y le pasamos como parámetro un 100
@@ -61,6 +68,7 @@ class CuentaTest {
     }
 
     @Test
+    @DisplayName("probando cunado hay dinero insuficiente en la cuenta!")
     void testDineroInsufivienteExceptionCuenta() {
         Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345")); // pasamos los parámetros al objeto cuenta
         // bloque que puede arrojar una excepcion
@@ -73,6 +81,7 @@ class CuentaTest {
     }
 
     @Test
+    @DisplayName("probando metodo transferir del banco!")
     void testTransferirDineroCuentas() {
         Cuenta cuenta1 = new Cuenta("john Doe", new BigDecimal("2500"));
         Cuenta cuenta2 = new Cuenta("Andres", new BigDecimal("1500.8989"));
@@ -85,7 +94,12 @@ class CuentaTest {
     }
 
     @Test
+    @Disabled
+    @DisplayName("probando varios assertEquals  con el metodo assertAll()!")
     void testRelacionBancoCuentas() {
+
+        fail(); // obliga a que el metodo falle
+
         Cuenta cuenta1 = new Cuenta("john Doe", new BigDecimal("2500"));
         Cuenta cuenta2 = new Cuenta("Andres", new BigDecimal("1500.8989"));
 
