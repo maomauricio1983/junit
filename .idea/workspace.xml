@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8542b489-9350-4e83-b979-37992cd9756a" name="Changes" comment="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/amunoz/app/exceptions/DineroInsuficienteException.java" afterDir="false" />
+    <list default="true" id="8542b489-9350-4e83-b979-37992cd9756a" name="Changes" comment="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Banco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/amunoz/app/models/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/amunoz/app/models/CuentaTest.java" afterDir="false" />
@@ -55,11 +56,12 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Arnold Mauricio/Documents/Cursos/microservicios&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,11 +69,69 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.amunoz.app" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.amunoz.app.models" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.amunoz.app" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.CuentaTest">
+    <configuration name="EjercicioPractico3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.EjercicioPractico3" />
+      <module name="junit_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.amunoz.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EjercicioPractico4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.EjercicioPractico4" />
+      <module name="junit_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.amunoz.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Referencia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.Referencia" />
+      <module name="junit_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.amunoz.app.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.Vector" />
+      <module name="junit_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.amunoz.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CuentaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_app" />
       <extension name="coverage">
@@ -87,77 +147,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CuentaTest.testDebitoCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.amunoz.app.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
-      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
-      <option name="METHOD_NAME" value="testDebitoCuenta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CuentaTest.testDineroInsufivienteExceptionCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.amunoz.app.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
-      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
-      <option name="METHOD_NAME" value="testDineroInsufivienteExceptionCuenta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CuentaTest.testReferenciaCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.amunoz.app.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
-      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
-      <option name="METHOD_NAME" value="testReferenciaCuenta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CuentaTest.testSaldoCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.amunoz.app.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.amunoz.app.models" />
-      <option name="MAIN_CLASS_NAME" value="org.amunoz.app.models.CuentaTest" />
-      <option name="METHOD_NAME" value="testSaldoCuenta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CuentaTest" />
-        <item itemvalue="JUnit.CuentaTest.testDineroInsufivienteExceptionCuenta" />
-        <item itemvalue="JUnit.CuentaTest.testDebitoCuenta" />
-        <item itemvalue="JUnit.CuentaTest.testReferenciaCuenta" />
-        <item itemvalue="JUnit.CuentaTest.testSaldoCuenta" />
+        <item itemvalue="Application.Referencia" />
+        <item itemvalue="Application.EjercicioPractico3" />
+        <item itemvalue="Application.EjercicioPractico4" />
+        <item itemvalue="Application.Vector" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +169,15 @@
       <option name="presentableId" value="Default" />
       <updated>1674676670760</updated>
       <workItem from="1674676671893" duration="5800000" />
+      <workItem from="1674700280238" duration="339000" />
+      <workItem from="1674757515865" duration="280000" />
+      <workItem from="1674758111529" duration="620000" />
+      <workItem from="1674768176225" duration="600000" />
+      <workItem from="1674774202609" duration="9139000" />
+      <workItem from="1674783586400" duration="13000" />
+      <workItem from="1674846307664" duration="2460000" />
+      <workItem from="1675020436210" duration="20000" />
+      <workItem from="1676424182343" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="creacion del proyecto">
       <created>1674676837401</created>
@@ -202,11 +207,29 @@
       <option name="project" value="LOCAL" />
       <updated>1674681568554</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero.">
+      <created>1674684880823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674684880823</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -224,6 +247,23 @@
     <MESSAGE value="importamos Junit en el pom, reamos la clase Cuenta  y la clase CuentaTest&#10;  en la carpeta test  para realizar las primeras pruebas." />
     <MESSAGE value="implementamos las pruebas de testNombreCuenta y testSaldoCuenta en la clase test" />
     <MESSAGE value="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementamos las pruebas de testReferenciaCuenta que valida que dos objetos iguales sean de la misma referencia" />
+    <MESSAGE value="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero." />
+    <option name="LAST_COMMIT_MESSAGE" value="implementamos el metodo testDineroInsufivienteExceptionCuenta() para arrojar una excepcion en caso de que al moento de hacer debito la cuenta quede en cero." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/amunoz/app/Vector.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/amunoz/app/EjercicioPractico3.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
