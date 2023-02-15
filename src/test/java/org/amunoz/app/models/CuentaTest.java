@@ -19,9 +19,9 @@ class CuentaTest {
 //        cuenta.setPersona("Mauricio");
         String esperado = "Mauricio";
         String real = cuenta.getPersona();
-        assertNotNull(real); //verifica que real NO sea null
-        assertEquals(esperado, real);
-        assertTrue(real.equals("Mauricio"));
+        assertNotNull(real, () ->"la cuenta NO puede ser null"); //verifica que real NO sea null
+        assertEquals(esperado, real, () ->"el nombre de la cuenta NO es el esperado!");
+        assertTrue(real.equals("Mauricio"), () -> "nombre cuenta esperada debe ser igual a  la real");
     }
 
     @Test
@@ -98,37 +98,28 @@ class CuentaTest {
 
         assertAll(() ->
                 {
-                    assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
+                    assertEquals("1000.8989", cuenta2.getSaldo().toPlainString(), () -> "El valor del saldo NO es el esperado para la cuenta2!.");
                 },
                 () -> {
-                    assertEquals("1000.8989", cuenta2.getSaldo().toPlainString());
+                    assertEquals("3000", cuenta1.getSaldo().toPlainString() , () -> "El valor del saldo NO es el esperado para la cuenta1!.");
                 },
                 () -> {
-                    assertEquals("3000", cuenta1.getSaldo().toPlainString());
+                    assertEquals(2, banco.getCuentas().size() , () -> "El numnero de cuentas NO es el esperado!."); // el banco debería tener dos cuentas asignadas
                 },
                 () -> {
-                    assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
-                },
-                () -> {
-                    assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
-                },
-                () -> {
-                    assertEquals(2, banco.getCuentas().size()); // el banco debería tener dos cuentas asignadas
-                },
-                () -> {
-                    assertEquals("Banco del Estado", cuenta1.getBanco().getNombre()); // compara que el nombre del banco sea el esperado
+                    assertEquals("Banco del Estado", cuenta1.getBanco().getNombre() , () -> "El nombre del banco NO es el esperado!."); // compara que el nombre del banco sea el esperado
                 },
                 () -> {
                     assertEquals("Andres", banco.getCuentas().stream()// obtenemos la lista cuentas
                             .filter(c -> c.getPersona().equals("Andres")) // con filter revisamos que cuenta dentro de la lista tiene como persona a Andres
                             .findFirst() //obtenemos el primero que encuentre
                             .get() // obtenemos la cuenta
-                            .getPersona()); // obtenemos la persona asignada a la cuenta
+                            .getPersona(), () -> "No se encuentra la persona "); // obtenemos la persona asignada a la cuenta
                 },
                 () -> {
                     // hace lo mismo que el de arriba
                     assertTrue(banco.getCuentas().stream()
-                            .anyMatch(c -> c.getPersona().equals("Andres")));
+                            .anyMatch(c -> c.getPersona().equals("Andres")), () -> "No se encuentra la persona");
                 }
         );
 
